@@ -30,7 +30,7 @@ class ValidateException extends \Exception {
     protected $messages;
 
     /**
-     * @param \Witooh\Validators\IValidator $validator failed validator object
+     * @param \Witooh\Validators\IBaseValidator $validator failed validator object
      */
     public function __construct($validator)
     {
