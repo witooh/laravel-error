@@ -30,11 +30,11 @@ class ValidateException extends \Exception {
     protected $messages;
 
     /**
-     * @param \Witooh\Validators\IBaseValidator $validator failed validator object
+     * @param \Illuminate\Support\MessageBag $messages
      */
-    public function __construct($validator)
+    public function __construct($messages)
     {
-        $this->messages = $validator->getErrors();
+        $this->messages = $messages;
         parent::__construct($this->messages, 400);
     }
 
